@@ -45,8 +45,18 @@ class LinkedList:
     self.head = None
     self.head = temp
 
-  def deleteLast(self):
+  def deleteNode(self, position):
+    if position == 0: 
+      deleteFirst()
+      return
+    current = self.head
     
+    for i in range(0,position-1):
+      previous = current
+      current = current.next
+    previous.next = current.next
+    
+
     
         
 
@@ -63,3 +73,26 @@ LL.insertLast(1)
 LL.printOut()
 LL.deleteFirst()
 LL.printOut()
+LL.deleteNode(3)
+LL.printOut()
+LL.deleteNode(3)
+LL.printOut()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
